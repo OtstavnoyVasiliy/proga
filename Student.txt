@@ -1,0 +1,31 @@
+public class Student extends Man{
+    private int group;
+    private String fuck;
+
+    public Student() {
+        super("",-1);
+        group=-1;
+        fuck="";
+    }
+    public int getGroup(){
+        return group;
+    }
+
+    public Student(String fio, int year, int group, String fuck) {
+        super(fio, year);
+        this.group = group;
+        this.fuck = fuck;
+    }
+    public void goUp(){
+        group+=10;
+    }
+    @Override
+    public String toString() {
+        return "{" +
+        "fio='" + this.getFio() + '\'' +
+                ", year=" + this.getYear() +  '\'' +
+                "group=" + group +
+                ", fuck='" + fuck + '\'' +
+                '}';
+    }
+}
