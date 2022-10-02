@@ -1,17 +1,19 @@
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-        int x=in.nextInt();
-        in.nextLine();
-        String name=in.nextLine();
-        Man man=new Man(name,x);
-        String fuck=in.next();
-        int group=in.nextInt();
-        Student student=new Student(name,x,group,fuck);
-        System.out.println(student);
 
-        System.out.println("vash man1 : "+ man.getFio() +" "+ man.age(2022));
-        System.out.println(man);
+        Airplane airplane=new Airplane();
+        PassengerPlane passengerPlane=new PassengerPlane();
+        PassengerPlane passengerPlane1=new PassengerPlane("Zhmih Airlines",43.0,1228,20000);
+
+        airplane.print();
+        passengerPlane.print();
+
+        airplane.setRangeOfFlight(airplane.getRangeOfFlight()+20);
+        passengerPlane.setNumOfSeats(passengerPlane.getNumOfSeats()-2);
+
+        airplane.print();
+        passengerPlane.print();
+
+        passengerPlane1.print();
     }
 }
