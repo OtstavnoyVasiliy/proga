@@ -1,0 +1,50 @@
+public class Airplane {
+    String brand;
+    double fuelTankVolume;
+    int rangeOfFlight;
+
+    public Airplane() {
+        brand="Aeroflot";
+        fuelTankVolume=200000.0;
+        rangeOfFlight=12000;
+    }
+
+    public Airplane(String brand, double fuelTankVolume, int rangeOfFlight) {
+        this.brand = brand;
+        this.fuelTankVolume = fuelTankVolume;
+        this.rangeOfFlight = rangeOfFlight;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public double getFuelTankVolume() {
+        return fuelTankVolume;
+    }
+
+    public void setFuelTankVolume(double fuelTankVolume) {
+        this.fuelTankVolume = fuelTankVolume;
+    }
+
+    public int getRangeOfFlight() {
+        return rangeOfFlight;
+    }
+
+    public void setRangeOfFlight(int rangeOfFlight) {
+        this.rangeOfFlight = rangeOfFlight;
+    }
+
+
+    void print() {
+        System.out.println( "Airplane :\n" +
+                "brand='" + brand + '\'' +
+                ", fuelTankVolume=" + fuelTankVolume +
+                ", rangeOfFlight=" + rangeOfFlight
+                );
+    }
+}
