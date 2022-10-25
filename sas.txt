@@ -1,0 +1,37 @@
+public class Massive<T> {
+    T[]arr;
+    
+    Massive(T[]arr){
+        this.arr=arr;
+    }
+    T getElemByIndex(int i){
+        if(i>-1 && i< arr.length)
+            return arr[i];
+        return null;
+    }
+    
+    boolean isSym(){
+        for (int i = 0; i < arr.length/2; i++) {
+            if(!arr[i].equals(arr[arr.length-1-i]))
+                return false;
+        }
+        return true;
+    }
+    void printPart(int p1,int p2){
+        if(p1<p2 && p2< arr.length){
+            System.out.println("{");
+            for (int i = p1; i < p2; i++)
+                System.out.println(arr[i]+", ");
+            System.out.println("}");
+        }
+    }
+    void swap(int i1,int i2){
+        if(i1>-1 && i1< arr.length && i2>-1 && i2< arr.length) {
+            T temp;
+            temp = arr[i1];
+            arr[i1]=arr[i2];
+            arr[i2]=temp;
+        }
+    }
+    
+}
