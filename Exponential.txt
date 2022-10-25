@@ -1,0 +1,26 @@
+public class Exponential implements Progress{
+    double b1,q;
+
+    public Exponential(double b1, double q) {
+        this.b1 = b1;
+        this.q = q;
+    }
+
+    @Override
+    public double penis(int j) {
+        return b1*Math.pow(q,j-1);
+    }
+
+    @Override
+    public double sum(int j) {
+        return (penis(j)*q-b1)/(q-1);
+    }
+
+    @Override
+    public String toString() {
+        return "Exponential{" +
+                "b1=" + b1 +
+                ", q=" + q +
+                '}';
+    }
+}
