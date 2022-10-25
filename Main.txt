@@ -1,19 +1,16 @@
 public class Main {
     public static void main(String[] args) {
 
-        Airplane airplane=new Airplane();
-        PassengerPlane passengerPlane=new PassengerPlane();
-        PassengerPlane passengerPlane1=new PassengerPlane("Zhmih Airlines",43.0,1228,20000);
-
-        airplane.print();
-        passengerPlane.print();
-
-        airplane.setRangeOfFlight(airplane.getRangeOfFlight()+20);
-        passengerPlane.setNumOfSeats(passengerPlane.getNumOfSeats()-2);
-
-        airplane.print();
-        passengerPlane.print();
-
-        passengerPlane1.print();
+        Scanner in = new Scanner(System.in);
+        Progress[] progresses = new Progress[6];
+        for (int i = 0; i < 6; i++) {
+            if(in.nextInt()==1)
+                progresses[i]=new Linear(i,i+1);
+            else
+                progresses[i]=new Exponential(i,4);
+        }
+        for (int i = 0;i<6;i++) {
+            System.out.println(progresses[i].sum(6));
+        }
     }
 }
