@@ -1,0 +1,4 @@
+public interface Progress {
+    double penis(int j);
+    double sum(int j);
+}
